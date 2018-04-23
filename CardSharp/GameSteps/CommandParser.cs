@@ -190,11 +190,6 @@ namespace CardSharp.GameSteps
                     return true;
 
                 case "托管":
-                    if (desk.Players.Count(p => p is FakePlayer) == 2)
-                    {
-                        desk.AddMessage("你觉得这样好玩么?");
-                        return true;
-                    }
                     player.HostedEnabled = true;
                     desk.AddMessage("托管成功");
                     RunHostedCheck(desk);
